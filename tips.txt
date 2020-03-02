@@ -35,3 +35,22 @@ l 	按位或 ，二进制位数或有1结果位为1
 ^ 	按位异或 ，二进制位数不同结果位为1
 ~ 	按位取反，二进制位0和1结果位互换
 ————————————————
+
+str = ‘0123456789’
+print str[0:3] #截取第一位到第三位的字符
+print str[:] #截取字符串的全部字符
+print str[6:] #截取第七个字符到结尾
+print str[:-3] #截取从头开始到倒数第三个字符之前
+print str[2] #截取第三个字符
+print str[-1] #截取倒数第一个字符
+print str[::-1] #创造一个与原字符串顺序相反的字符串
+print str[-3:-1] #截取倒数第三位与倒数第一位之前的字符
+print str[-3:] #截取倒数第三位到结尾
+print str[:-5:-3] #逆序截取，具体啥意思没搞明白？
+
+str = "this is string example....wow!!! this is really string";
+print str.replace("is", "was");
+print str.replace("is", "was", 3);
+
+thwas was string example....wow!!! thwas was really string
+thwas was string example....wow!!! thwas is really string
