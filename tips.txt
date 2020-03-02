@@ -17,7 +17,7 @@ Line 6: IndentationError: expected an indented block
 若13^13 ===》0
 则
 01101 <====13
-01101 <====17
+01101 <====13
 ---------
 00000 ====>0
 
