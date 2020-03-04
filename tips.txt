@@ -54,3 +54,6 @@ print str.replace("is", "was", 3);
 
 thwas was string example....wow!!! thwas was really string
 thwas was string example....wow!!! thwas is really string
+
+python 从后往前面遍历
+ for j in range(len(second)-1, -1, -1):
