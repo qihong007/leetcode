@@ -57,3 +57,7 @@ thwas was string example....wow!!! thwas is really string
 
 python 从后往前面遍历
  for j in range(len(second)-1, -1, -1):
+ 
+ 关于2020_03_05.py 这道题是中等题，一开始以为很容易，没有想到不能开拓新空间只能在原有的数组上改，这是一个难点
+ 给定一幅由N × N矩阵表示的图像，其中每个像素的大小为4字节，编写一种方法，将图像旋转90度。
+不占用额外内存空间能否做到？做到了哈哈哈哈
