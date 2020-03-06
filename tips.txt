@@ -114,3 +114,16 @@ print(list(reversed(seqList)))
 ['b', 'o', 'o', 'n', 'u', 'R']
 [8, 7, 6, 5]
 [5, 3, 4, 2, 1]
+
+python判断字符串（string）是否包含（contains）子字符串的方法
+方法1：使用 in 方法实现contains的功能：
+site = 'http://www.outofmemory.cn/'
+if "sharejs"  in site:
+     print('site contains sharejs') 
+     
+方法2：使用find函数实现contains的功能
+s = "This be a string"
+if s.find("is") == -1:
+    print "No 'is' here!"
+else:
+    print "Found 'is' in the string."
