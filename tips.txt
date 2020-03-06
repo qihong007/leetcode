@@ -61,3 +61,56 @@ python 从后往前面遍历
  关于2020_03_05.py 这道题是中等题，一开始以为很容易，没有想到不能开拓新空间只能在原有的数组上改，这是一个难点
  给定一幅由N × N矩阵表示的图像，其中每个像素的大小为4字节，编写一种方法，将图像旋转90度。
 不占用额外内存空间能否做到？做到了哈哈哈哈
+
+python常用函数
+sorted（）排序时用到
+
+>>>a = [5,7,6,3,4,1,2]
+>>> b = sorted(a)       # 保留原列表
+>>> a 
+[5, 7, 6, 3, 4, 1, 2]
+>>> b
+[1, 2, 3, 4, 5, 6, 7]
+ 
+>>> L=[('b',2),('a',1),('c',3),('d',4)]
+>>> sorted(L, cmp=lambda x,y:cmp(x[1],y[1]))   # 利用cmp函数
+[('a', 1), ('b', 2), ('c', 3), ('d', 4)]
+>>> sorted(L, key=lambda x:x[1])               # 利用key
+[('a', 1), ('b', 2), ('c', 3), ('d', 4)]
+ 
+ 
+>>> students = [('john', 'A', 15), ('jane', 'B', 12), ('dave', 'B', 10)]
+>>> sorted(students, key=lambda s: s[2])            # 按年龄排序
+[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]
+ 
+>>> sorted(students, key=lambda s: s[2], reverse=True)       # 按降序
+[('john', 'A', 15), ('jane', 'B', 12), ('dave', 'B', 10)]
+>>>
+
+reversed()
+reversed(seq)，seq -- 要转换的序列，可以是 tuple, string, list 或 range。
+
+#!/usr/bin/env python3
+ 
+# 字符串
+seqString = 'Runoob'
+print(list(reversed(seqString)))
+ 
+# 元组
+seqTuple = ('R', 'u', 'n', 'o', 'o', 'b')
+print(list(reversed(seqTuple)))
+ 
+# range
+seqRange = range(5, 9)
+print(list(reversed(seqRange)))
+ 
+# 列表
+seqList = [1, 2, 4, 3, 5]
+print(list(reversed(seqList)))
+
+以上实例输出结果为：
+
+['b', 'o', 'o', 'n', 'u', 'R']
+['b', 'o', 'o', 'n', 'u', 'R']
+[8, 7, 6, 5]
+[5, 3, 4, 2, 1]
