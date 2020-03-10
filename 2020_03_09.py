@@ -29,5 +29,12 @@ class Solution(object):
             '''
             final = result.val
             '''
+        '''
+        方法二，容易理解的思路
+        for i in range(0, num-k+1):
+            final = result.val
+            result = result.next
 
+        return final
+        '''
         return result.val
