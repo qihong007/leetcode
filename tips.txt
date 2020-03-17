@@ -194,3 +194,5 @@ takes exactly 2 arguments (3 given)
 修改方法：定义方法时修改为 def deporder（self,decoder_ouputs,j）即可
 
 求中位数：mid = low + (high - low)/2， 感觉挺好用的
+
+ r rows and c columns.  r行c列
