@@ -192,3 +192,5 @@ takes exactly 2 arguments (3 given)
 意思是，方法deporder（）需要两个参数，但却提供了三个。
 原来，python类中，当使用实例调用方法时，相当将实例自身作为第一个参数传入deporder（）中，本例中及传入了instance、decoder_outputs、1三个参数。
 修改方法：定义方法时修改为 def deporder（self,decoder_ouputs,j）即可
+
+求中位数：mid = low + (high - low)/2， 感觉挺好用的
