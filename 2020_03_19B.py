@@ -37,7 +37,7 @@ p、q 为不同节点且均存在于给定的二叉树中。
 #         self.val = x
 #         self.left = None
 #         self.right = None
-#思路：
+#思路：先判断p和q是不是彼此的子树这种情况，接下来从root往下判断，收集同时包含p和q的节点containtwo(self, root, p, q, treelist)，最后包含p和q的节点就是距离最近的祖先节点
 class Solution(object):
     def contain(self, p, q, nums):
         if p == None:
