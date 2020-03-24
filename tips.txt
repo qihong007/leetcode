@@ -196,3 +196,5 @@ takes exactly 2 arguments (3 given)
 求中位数：mid = low + (high - low)/2， 感觉挺好用的
 
  r rows and c columns.  r行c列
+
+3.24没刷题但今天练习了数据库，sql语句还有接触了hadoop/hive
