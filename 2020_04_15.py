@@ -19,11 +19,27 @@
 
 '''
 ######
+        #动态规划，找出n-1里面最大值，再n大还是n加n-1的最大值大
+        #dp[i]为算上了num[i]的最大值，所以相当于在i位置包含了第i个数的最大值
+        
+        执行用时 :28 ms, 在所有 Python 提交中击败了76.32% 的用户
+        内存消耗 :13.8 MB, 在所有 Python 提交中击败了100.00%的用户
+    def maxSubArray(self, nums):
+        dp = []
+        for i in range(0, len(nums)):
+            dp.append(0)
+        dp[0] = nums[0]
+        result = nums[0]
+        for i in range(1, len(nums)):
+            dp[i] = max(nums[i], nums[i]+dp[i-1])
+            result = max(result, dp[i])
+        return result  
+
 '''
 
 class Solution(object):
     def maxSubArray(self, nums):
-        #最笨方法s=
+        #最笨方法暴力算每个位置的最大值
         maxnum = nums[0]
         sumnum = 0
         for i in range(0, len(nums)):
