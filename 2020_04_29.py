@@ -21,6 +21,13 @@
 执行用时 :236 ms, 在所有 Python 提交中击败了47.14% 的用户
 内存消耗 :15.4 MB, 在所有 Python 提交中击败了100.00%的用户
 
+题解思路：
+第一层递归遍历每个节点，第二层递归遍历每个每个结点开始的路径
+此处撰写解题思路
+话说，这个题坑还是不少，(可能也是我有时候写递归结束条件不严谨，有些想当然)不过啊，总算过了。好了来说一说做这题的思路吧。首先题目强调路径不一定经过根节点.so...我们就先从根节点出发，把以根节点出发的路径都找到.嗯...我想过依据target<0来剪枝，其实这一步就发现了结点里面的值有可能是负的（想出这个测试用例的人真是个小机灵鬼）算了，放弃剪枝了，先用暴力法求出来把。然后根节点出发的dfs就写出来了。
+接下来，就是遍历树里面每一个根节点。因为路径可能是从任何一个结点出发的.
+纯暴力解法，不带一点优化。
+
 '''
 
 class Solution(object):
@@ -30,7 +37,9 @@ class Solution(object):
         return self.path(root, sum) + self.pathSum(root.left, sum) + self.pathSum(root.right, sum)
     
     def path(self, root, sum):
+        #这里是root是否为None
         if not root:
+          
             return 0
         res = 0
         if root.val == sum:
